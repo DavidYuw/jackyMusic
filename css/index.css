@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+ul {
+	width: 200px;
+	height: 200px;
+	/* background-color: red; */
+	position: absolute;
+	bottom: 120px;
+	left: 65%;
+	margin-left: -100px;
+	transform-style: preserve-3d;
+	/* transform: rotateX(-10deg); */
+	animation: sport 6s linear 0s infinite normal;
+}
+
+@keyframes sport {
+	from {
+		transform: rotateX(-10deg) rotateY(0deg);
+	}
+
+	to {
+		transform: rotateX(-10deg) rotateY(360deg);
+	}
+}
+
+ul:hover {
+	animation-play-state: paused;
+}
+
+ul:hover li img {
+	opacity: 0.5;
+}
+
+ul li:hover img {
+	opacity: 1;
+	transform: scale(1.1, 1.1);
+	cursor: pointer;
+}
+
+ul li {
+	list-style: none;
+	width: 200px;
+	height: 200px;
+	font-size: 60px;
+	text-align: center;
+	line-height: 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: black;
+}
+
+ul li:nth-child(1) {
+	/* background-color: green; */
+	transform: rotateY(60deg) translateZ(200px);
+}
+
+ul li:nth-child(2) {
+	/* background-color: orange; */
+	transform: rotateY(120deg) translateZ(200px);
+}
+
+ul li:nth-child(3) {
+	/* background-color: red; */
+	transform: rotateY(180deg) translateZ(200px);
+}
+
+ul li:nth-child(4) {
+	/* background-color: yellow; */
+	transform: rotateY(240deg) translateZ(200px);
+}
+
+ul li:nth-child(5) {
+	/* background-color: blue; */
+	transform: rotateY(300deg) translateZ(200px);
+}
+
+ul li:nth-child(6) {
+	/* background-color: pink; */
+	transform: rotateY(360deg) translateZ(200px);
+}
+
+ul li img {
+	width: 200px;
+	height: 200px;
+	border: 5px solid skyblue;
+	box-sizing: border-box;
+}
+
+.heart {
+	width: 173px;
+	height: 157px;
+	position: absolute;
+	left: 100px;
+	bottom: 100px;
+	animation: move 10s linear 0s infinite normal;
+}
+
+@keyframes move{
+	0%{
+		left: 100px;
+		bottom: 100px;
+		opacity: 1;
+	}
+	20%{
+		left: 400px;
+		bottom: 400px;
+		opacity: 0;
+	}
+	40%{
+		left: 800px;
+		bottom: 700px;
+		opacity: 1;
+	}
+	60%{
+		left: 1200px;
+		bottom: 300px;
+		opacity: 0;
+	}
+	80%{
+		left: 1600px;
+		bottom: 100px;
+		opacity: 1;
+	}
+	100%{
+		left: 1200px;
+		bottom: -200px;
+		opacity: 0;
+	}
+}
